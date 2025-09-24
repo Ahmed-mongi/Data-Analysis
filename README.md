@@ -1,53 +1,68 @@
 # Data-Analysis
-# Stock Market EDA Dashboard
+# Data Dashboards in Colab
 
-## Overview
-This project performs **Exploratory Data Analysis (EDA)** on stock exchange data.  
-It includes:
-- Data cleaning and summary statistics  
-- Price and volume trends  
-- Moving averages  
-- Daily returns distribution  
-- Volatility analysis  
-- Monthly and cumulative returns  
-- Trader-focused insights (best/worst days, Sharpe ratio, weak areas)  
-- Interactive dashboard built with **Plotly Dash**  
+This repository contains two interactive data analysis dashboards implemented in **Google Colab** using **Dash** and **Plotly**.
 
-The goal is to help traders identify weak areas and profit opportunities in the stock market.
+Both projects demonstrate **Exploratory Data Analysis (EDA)** with interactive visualizations, accessible directly from a Colab environment.
 
 ---
 
-## Dataset
-The dataset is provided in `Stock Exchange Data.zip`.  
-Make sure to extract it before running the analysis.  
+## 1. IMDb / Netflix Titles EDA Dashboard
 
-Expected columns:
-- `Date`
-- `Open`
-- `High`
-- `Low`
-- `Close`
-- `Volume`
+### Dataset
+- Source: [Netflix Titles dataset on Kaggle](https://www.kaggle.com/shivamb/netflix-shows)  
+- Contains metadata about Netflix movies and TV shows including type, release year, country, date added, and rating.
 
----
+### Features
+- Movies vs TV Shows distribution  
+- Additions by month (overall trends)  
+- Movies added per month (seasonality analysis)  
+- Heatmap of movies added by **month vs year** (seasonal patterns over time)  
+- Top 10 producing countries for movies  
+- Integration-ready with IMDb ratings file for:
+  - Top rated movies  
+  - Top producing countries among top rated titles  
 
-## Requirements
-Run the following in **Google Colab** or your local environment:
-
-
-# EDA Dashboard in Google Colab
-
-This project runs an interactive Exploratory Data Analysis (EDA) dashboard using **Dash**, **Plotly**, and **Ngrok** inside Google Colab.
+### Usage
+Run the notebook in Colab. The dashboard is hosted with **Colab integration for Dash** and displays inline.
 
 ---
 
-## Features
-- Interactive histograms, scatter plots, and boxplots
-- Responsive layout using Bootstrap
-- Runs inside Colab with a public URL (via Ngrok)
-- Easily extendable to new charts and datasets
+## 2. Stock Market Analysis Dashboard
+
+### Dataset
+- Stock price data retrieved via **Yahoo Finance API** (`yfinance`)  
+- Contains open, close, high, low prices, and trading volume.
+
+### Features
+- Interactive stock price trends with range selectors  
+- Daily returns analysis  
+- Moving averages (e.g., 20-day, 50-day)  
+- Volatility visualization  
+- Comparison of multiple stocks in one view  
+
+### Usage
+Run the notebook in Colab. Input stock ticker symbols to visualize trends and metrics.
 
 ---
+
+## Tech Stack
+- **Python 3**  
+- **Dash**  
+- **Plotly Express**  
+- **Dash Bootstrap Components**  
+- **Pandas**  
+- **yfinance**  
+- **Colab Dash integration** for inline display  
+
+---
+
+## How to Run
+1. Open the corresponding Colab notebook.  
+2. Install dependencies:
+   ```bash
+   pip install dash dash-bootstrap-components plotly pandas yfinance
+
 
 ## Requirements
 The dashboard needs the following Python packages:
