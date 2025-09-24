@@ -1,13 +1,12 @@
-# Data-Analysis
-# Data Dashboards in Colab
+# 📊 Data Dashboards in Colab
 
-This repository contains two interactive data analysis dashboards implemented in **Google Colab** using **Dash** and **Plotly**.
+This repository contains three interactive data analysis dashboards implemented in **Google Colab** using **Dash** and **Plotly**.
 
-Both projects demonstrate **Exploratory Data Analysis (EDA)** with interactive visualizations, accessible directly from a Colab environment.
+Each project demonstrates **Exploratory Data Analysis (EDA)** with interactive visualizations, accessible directly from a Colab environment or by running locally.
 
 ---
 
-## 1. IMDb / Netflix Titles EDA Dashboard
+## 1. 🎬 IMDb / Netflix Titles EDA Dashboard
 
 ### Dataset
 - Source: [Netflix Titles dataset on Kaggle](https://www.kaggle.com/shivamb/netflix-shows)  
@@ -28,7 +27,7 @@ Run the notebook in Colab. The dashboard is hosted with **Colab integration for 
 
 ---
 
-## 2. Stock Market Analysis Dashboard
+## 2. 📈 Stock Market Analysis Dashboard
 
 ### Dataset
 - Stock price data retrieved via **Yahoo Finance API** (`yfinance`)  
@@ -46,92 +45,46 @@ Run the notebook in Colab. Input stock ticker symbols to visualize trends and me
 
 ---
 
-## Tech Stack
-- **Python 3**  
-- **Dash**  
-- **Plotly Express**  
-- **Dash Bootstrap Components**  
-- **Pandas**  
-- **yfinance**  
-- **Colab Dash integration** for inline display  
+## 3. 🚖 Uber Trips EDA Dashboard
 
----
+### Dataset
+- Provided in **`Uber Data Analysis.zip`**  
+- Contains Uber trip logs including date, category, miles, and trip purpose.
 
-## How to Run
-1. Open the corresponding Colab notebook.  
-2. Install dependencies:
-   ```bash
-   pip install dash dash-bootstrap-components plotly pandas yfinance
-
-
-## Requirements
-The dashboard needs the following Python packages:
-
-- dash
-- dash-bootstrap-components
-- plotly
-- pandas
-- pyngrok
-
----
-
-## Installation
-Run this in your Colab notebook:
-
-```bash
-!pip install dash dash-bootstrap-components pyngrok plotly pandas
-
-
-# 🚖 Uber Trips EDA Dashboard
-
-[![Python](https://img.shields.io/badge/Python-3.12%2B-blue)](https://www.python.org/)  
-[![Dash](https://img.shields.io/badge/Dash-Framework-orange)](https://dash.plotly.com/)  
-[![Plotly](https://img.shields.io/badge/Plotly-Visualizations-lightblue)](https://plotly.com/python/)  
-
-## 📌 Project Overview
-This project provides an **interactive dashboard** to explore Uber trip data.  
-It helps analyze **trip purposes, mileage trends, and categories (Business vs Personal)** using Python, Dash, and Plotly.  
-
----
-
-## 📂 Dataset
-The dataset is provided in **`Uber Data Analysis.zip`**.  
-
-Main columns:
-- **START_DATE / END_DATE** → Date & time of trips  
-- **CATEGORY** → Trip type (Business / Personal)  
-- **MILES** → Distance traveled  
-- **PURPOSE** → Reason for the trip (Meeting, Meal, Errand, Unknown)  
-
----
-
-## ⚙️ Features
+### Features
 ✅ Filter trips by **Purpose** and **Category**  
 ✅ Interactive **charts & plots**  
-✅ Pre-built **insights** section with key observations  
+✅ Pre-built **insights section**  
 
-### Visualizations:
+#### Visualizations:
 - 📊 **Purpose Distribution** → Most common trip reasons  
 - 📈 **Mileage Trends** → Average miles by hour & purpose  
 - 📦 **Box Plot** → Trip length comparison (Business vs Personal)  
+
+### Example Insights
+- Business trips (Meetings, Meals) dominate overall usage.  
+- Mileage is higher during **commuting hours** for business trips.  
+- Business trips are **longer & more variable**, while personal trips are **shorter & consistent**.  
+
+### Usage
+Run `uber_dashboard.py` locally or inside Colab with Colab-Dash integration.  
+Default local URL: 👉 `http://127.0.0.1:8050/`
 
 ---
 
 ## 🛠️ Tech Stack
 - **Python 3.12+**  
-- **Pandas** → Data wrangling  
-- **Plotly Express** → Interactive charts  
-- **Dash** → Dashboard framework  
-- **Dash Bootstrap Components** → Styling (Cyborg theme)  
+- **Dash**  
+- **Plotly Express**  
+- **Dash Bootstrap Components**  
+- **Pandas**  
+- **yfinance** (for Stock Market Dashboard)  
+- **Colab Dash integration** for inline display  
 
 ---
 
-## 🚀 How to Run Locally
-
-### 1️⃣ Clone this repo
-```bash
-git clone https://github.com/your-username/uber-dashboard.git
-cd uber-dashboard
-
-```bash
-pip install pandas numpy matplotlib seaborn plotly dash dash-bootstrap-components
+## 🚀 How to Run
+1. Open the corresponding Colab notebook or run locally.  
+2. Install dependencies:
+   ```bash
+   pip install dash dash-bootstrap-components plotly pandas yfinance
